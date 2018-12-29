@@ -406,7 +406,9 @@ module.exports = {
   |
   */
 
-  borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
+  borderColors: global.Object.assign({
+    default: colors['grey-light']
+  }, colors),
 
   /*
   |-----------------------------------------------------------------------------
@@ -898,8 +900,8 @@ module.exports = {
 
   plugins: [
     require('tailwindcss/plugins/container')({
-      // center: true,
-      // padding: '1rem',
+      center: true,
+      padding: '1rem',
     })
   ],
 

@@ -3,16 +3,17 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 // const morgan = require('morgan');
 
-const app = express();
+const app = express()
+const port = process.env.PORT || 8081
 
 // app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/', (req, res) => {
+app.post('/register', (req, res) => {
   res.send({
-    message: 'Tatttooed API'
+    message: `Hello ${req.body.email}. Welcome to Tatttooed.`
   })
 })
 
-app.listen(process.env.PORT || 8081)
+app.listen(port)
